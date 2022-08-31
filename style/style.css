@@ -30,9 +30,7 @@ p:not(:last-of-type) {
 	margin-bottom: 40px;
 }
 
-p:last-of-type {
-	margin-bottom: 60px;
-}
+
 
 .container {
 	max-width: 1200px;
@@ -110,6 +108,14 @@ p:last-of-type {
 /* !main */
 main {
 	padding: 60px 0 0 0;
+}
+
+.list-content li {
+	margin-bottom: 60px;
+}
+
+.list-content li:last-child {
+	margin-bottom: 0;
 }
 
 .underline {
