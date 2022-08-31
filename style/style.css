@@ -14,6 +14,7 @@ h2 {
 	font-size: 36px;
 	line-height: 48px;
 	text-transform: uppercase;
+	margin-bottom: 40px;
 
 }
 
@@ -22,8 +23,14 @@ p {
 	font-weight: 400;
 	font-size: 28px;
 	line-height: 48px;
-	margin-top: 40px;
+
 }
+
+p:not(:last-of-type) {
+	margin-bottom: 40px;
+}
+
+
 
 .container {
 	max-width: 1200px;
@@ -90,6 +97,8 @@ p {
 	font-weight: 400;
 }
 
+
+
 .menu-item a {
 	font-family: 'Staatliches';
 	color: #000;
@@ -98,13 +107,16 @@ p {
 
 /* !main */
 main {
-	margin-bottom: 50px;
+	padding: 60px 0 0 0;
 }
 
 .list-content li {
-	margin-top: 60px;
+	margin-bottom: 60px;
 }
 
+.list-content li:last-child {
+	margin-bottom: 0;
+}
 
 .underline {
 	text-decoration: underline;
@@ -143,27 +155,39 @@ main {
 	}
 
 	.header .container {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
 		min-height: 60px;
 	}
 
 	.header .container img {
-		width: 200px;
+		width: 300px;
+		margin-bottom: 15px;
+	}
+
+	.menu {
+		display: flex;
+		flex-direction: column-reverse;
 	}
 
 	.menu a {
-		margin-right: 15px;
+		margin-right: 0;
 	}
 
 	.list-menu {
 		min-height: 44px;
+		padding-right: 0px;
+
 	}
 
 	.button {
-		font-size: 20px;
+		font-size: 26px;
+		padding: 10px;
 	}
 
 	.menu-item {
-		font-size: 20px;
+		font-size: 26px;
 	}
 
 	.menu-item a {
@@ -171,13 +195,28 @@ main {
 	}
 
 	/* !main */
+
 	main {
-		margin-bottom: 25px;
+		padding: 30px 0 0 0;
 	}
 
-	.list-content li {
-		margin-top: 10px;
+	.list-content li h2 {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 40px;
+		position: relative;
 	}
+
+	p:not(:last-of-type) {
+		margin-bottom: 20px;
+	}
+
+	p:last-of-type {
+		margin-bottom: 30px;
+	}
+
+
 
 	h2 {
 		font-size: 28px;
@@ -186,7 +225,6 @@ main {
 	p {
 		font-size: 18px;
 		line-height: 28px;
-		margin-top: 20px;
 	}
 
 	.italic {
@@ -194,12 +232,13 @@ main {
 	}
 
 	.chapter {
+		position: absolute;
 		font-size: 14px;
-		top: -15px;
+		top: 35px;
 	}
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
 	.container {
 		padding: 0 10px;
 	}
@@ -213,11 +252,7 @@ main {
 	}
 
 	.header .container img {
-		width: 100px;
-	}
-
-	.menu a {
-		margin-right: 1px;
+		width: 300px;
 	}
 
 	.list-menu {
@@ -225,11 +260,13 @@ main {
 	}
 
 	.button {
-		font-size: 16px;
+		padding: 10px;
+		font-size: 24px;
+
 	}
 
 	.menu-item {
-		font-size: 16px;
+		font-size: 24px;
 	}
 
 	.menu-item a {
@@ -241,9 +278,7 @@ main {
 		margin-bottom: 15px;
 	}
 
-	.list-content li {
-		margin-top: 10px;
-	}
+
 
 	h2 {
 		font-size: 26px;
@@ -253,7 +288,7 @@ main {
 	p {
 		font-size: 16px;
 		line-height: 24px;
-		margin-top: 20px;
+
 	}
 
 	.italic {
@@ -263,6 +298,6 @@ main {
 
 	.chapter {
 		font-size: 12px;
-		top: -15px;
+
 	}
 }
